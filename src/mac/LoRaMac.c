@@ -2250,6 +2250,8 @@ static void ProcessMacCommands( uint8_t *payload, uint8_t macIndex, uint8_t comm
                         status = RegionLinkAdrReq( Nvm.MacGroup2.Region, &linkAdrReq, &linkAdrDatarate,
                                                 &linkAdrTxPower, &linkAdrNbRep, &linkAdrNbBytesParsed );
 
+                        // above call resolves into RegionEU868LinkAdrReq();
+
                         if( ( status & 0x07 ) == 0x07 )
                         {
                             // Set the status that the datarate has been increased

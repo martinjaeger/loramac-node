@@ -400,7 +400,8 @@ uint8_t RegionCommonLinkAdrReqVerifyParams( RegionCommonLinkAdrReqVerifyParams_t
             datarate =  verifyParams->CurrentDatarate;
         }
         else if( RegionCommonChanVerifyDr( verifyParams->NbChannels, verifyParams->ChannelsMask, datarate,
-                                      verifyParams->MinDatarate, verifyParams->MaxDatarate, verifyParams->Channels  ) == false )
+                                      verifyParams->MinDatarate, verifyParams->MaxDatarate, verifyParams->Channels  ) == false
+                || datarate <= DR_5)
         {
             status &= 0xFD; // Datarate KO
         }

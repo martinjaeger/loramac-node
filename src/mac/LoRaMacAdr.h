@@ -58,7 +58,7 @@ typedef struct sCalcNextAdrParams
      */
     bool AdrEnabled;
     /*!
-     * ADR ack counter.
+     * ADR ack counter: number of missed (!!) ADR acknowledgements
      */
     uint32_t AdrAckCounter;
     /*!
